@@ -1,5 +1,6 @@
 import Image from "next/image";
 import cx from "classnames"
+import Link from "next/link";
 
 interface SideBarMenuItemProps {
     title: string;
@@ -23,7 +24,7 @@ export default function SideBarMenuItem(props: Partial<SideBarMenuItemProps>) {
                 <Image src={`/icon/${icon}.svg`} alt="icon-menu-overview" width={25} height={25} />
             </div>
             <p className="item-title m-0">
-                <a href={href} className="text-lg text-decoration-none">{title}</a>
+                <Link href={href} className="text-lg text-decoration-none">{title}</Link>
             </p>
         </div>
     )
